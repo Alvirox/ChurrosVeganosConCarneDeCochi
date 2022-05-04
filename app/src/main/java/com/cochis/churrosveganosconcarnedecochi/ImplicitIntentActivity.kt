@@ -15,13 +15,48 @@ class ImplicitIntentActivity : AppCompatActivity() {
         setContentView(R.layout.activity_implicit_intent)
 
         agregarAccionAlBotonWeb()
+        agregarAccionAlBotonEmail()
+        agregarAccionAlBotonPhone()
+        agregarAccionAlBotonCamera()
     }
 
-    private fun agregarAccionAlBotonEmail(){
+    private fun agregarAccionAlBotonCamera() {
+        //obtener el enlace al botonCamera
+        val botonCamera = findViewById<ImageButton>(R.id.imageButtonCamera)
+        //asignar la accion al boton
+        botonCamera.setOnClickListener{
+            //definir el intent para llamar a la camara
+            //val intentCamera= Intent(android.media.)
+        }
+    }
+
+    private fun agregarAccionAlBotonPhone() {
+        //obtener el enlace al botonPhone
+        val botonPhone = findViewById<ImageButton>(R.id.imageButtonPhone)
+        //asignar la accion al botonPhone para que intente llamar al telefono
+        botonPhone.setOnClickListener {
+            //obtener el número telefonico de la caja de texto
+            val telefono = findViewById<EditText>(R.id.editTextPhone).text
+            //validar que el número telefonico haya sido ingresado
+            //de lo contrario enviar un mensaje
+            if (telefono.isEmpty()) {
+                Toast.makeText(
+                    this,
+                    "Favor de Ingresar un Número telefonico",
+                    Toast.LENGTH_SHORT
+                ).show()
+            } else {
+                val intentPhone = Intent(Intent.ACTION_DIAL, Uri.parse("tel:$telefono"))
+                startActivity(intentPhone)
+            }
+        }
+    }
+
+    private fun agregarAccionAlBotonEmail() {
         //obtener el enlace al botonEmail
         val botonCorreo = findViewById<Button>(R.id.buttonEmail)
         //asignar la accion al botonCorreo para que envie un mensaje por correo
-        botonCorreo.setOnClickListener{
+        botonCorreo.setOnClickListener {
             //definir al remitente
             val email = "edgar.alvarez.valenzuela.2019@cetis108.edu.mx"
             //inicializar el intent con el remitente
@@ -38,9 +73,6 @@ class ImplicitIntentActivity : AppCompatActivity() {
             startActivity(Intent.createChooser(intentEmail, "Enciar con..."))
         }
     }
-
-
-
 
 
     private fun agregarAccionAlBotonWeb() {
