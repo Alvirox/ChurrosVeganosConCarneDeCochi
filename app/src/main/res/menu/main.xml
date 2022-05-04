@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        app:ShowAsAction="never"
+        android:id="@+id/MenuItemMainSaludar"
+        android:title="Saludar" />
+    <item
+        app:ShowAsAction="never"
+        android:id="@+id/MenuItemMainIrA"
+        android:title="Ir a" />
+    <item
+        android:icon="@drawable/ic_acerca_de"
+        android:iconTint="@color/white"
+        app:showAsAction="always"
+        android:title="Acerca de"
+        android:id="@+id/MenuItemMainAcerca" />
+</menu>
