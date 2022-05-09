@@ -20,7 +20,7 @@
 
     <Button
         android:id="@+id/button"
-        android:layout_width="361"
+        android:layout_width="361dp"
         android:layout_height="wrap_content"
         android:backgroundTint="#930505"
         android:text="Iniciar Sesión"
@@ -50,7 +50,8 @@
         android:textAlignment="textStart"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewMainUsuario" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewMainUsuario"
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <TextView
         android:id="@+id/textViewMainContraseña"

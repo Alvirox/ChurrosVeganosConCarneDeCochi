@@ -4,11 +4,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
-        app:ShowAsAction="never"
+        app:showAsAction="never"
         android:id="@+id/MenuItemMainSaludar"
         android:title="Saludar" />
     <item
-        app:ShowAsAction="never"
+        app:showAsAction="never"
         android:id="@+id/MenuItemMainIrA"
         android:title="Ir a" />
     <item
